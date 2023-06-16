@@ -2,10 +2,11 @@
   "name": "webpack-template",
   "version": "1.0.0",
   "description": "A template for projects bundled using webpack",
-  "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "sandeepdotcode",
@@ -19,7 +20,12 @@
   },
   "homepage": "https://github.com/sandeepdotcode/webpack-template#readme",
   "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
     "webpack": "^5.87.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
   }
 }
